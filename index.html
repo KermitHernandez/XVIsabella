@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis XV Isabela</title>
+  <link rel="stylesheet" href="estilos_MOD.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<div class="music-widget">
+    <div class="title">Una de mis canciones favoritas</div>
+    <div class="player-box">
+      <img src="imagenes/Artista.jpg" alt="Artista" class="item-photo">
+      <button class="play-button" onclick="toggleAudio()">
+  <img src="imagenes/reproduccion.png" alt="Reproducir" class="item-play" />
+</button>
+      <audio id="audio" src="audio/Billie_Eilish_BIRDS_OF_A_FEATHER.mp3"></audio>
+    </div>
+  </div>
+
+  <script>
+  const audio = document.getElementById("audio");
+  const button = document.querySelector(".play-button");
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      button.innerHTML = '<img src="imagenes/pausa.png" alt="Pausar" class="play-icon" />';
+    } else {
+      audio.pause();
+      button.innerHTML = '<img src="imagenes/reproduccion.png" alt="Reproducir" class="play-icon" />';
+    }
+  }
+</script>
+
+<section class="intro">
+  <img  style="z-index: 1;" "height: 100px;" src="imagenes/tituloXVrenov.png" alt="Bienvenidos a mis XV">
+</section>
+
+<!-- Presentación -->
+<section class="presentacion" id="presentacion">
+  <h2>Estás cordialmente invitado</h2>
+  <p class="justificado">Con gran alegría, la familia Elejarza te invita a celebrar los XV años de nuestra querida <strong>Isabella Elejarza.</strong><br><br>¡Acompáñanos en esta noche llena de emociones y sorpresas!
+  </p>
+</section>
+
+
+<!--imagen estatica-->
+<section class="fondo1">
+</section>
+
+
+
+<!-- Fecha del evento -->
+<section class="seccion fecha" id="fecha">
+  <h2>Te esperamos este</h2>
+  <p>Sábado 7 de Junio</p>
+  
+  <a href="https://calendar.app.google/G1AmtZ6SoWGpKnUH9" class="icono-mapa">
+    <i class="fa-solid fa-calendar-days"></i>
+    </i></a>
+</section>
+
+<!--imagen estatica-->
+<section class="fondo2">
+</section>
+
+<!-- Ubicación -->
+<section class="seccion ubicacion" id="ubicacion">
+  <h2>Ubicaciones</h2>
+  <p><strong>Misa</strong><br> Parroquia nuestra señora de la asunción<br>7:00 PM</p>
+  <a href="https://maps.app.goo.gl/WfTZ5QSR71v4DPDF6" class="icono-mapa">
+    <i class="fa-solid fa-location-dot">
+    </i>
+  </a>
+
+  <p><strong>Salón</strong><br> Salón “Victoria Eventos”<br>8:00 PM</p>
+  <a href="https://maps.app.goo.gl/9c5KBu9ug8zDSQNNA" class="icono-mapa">
+    <i class="fa-solid fa-location-dot">
+    </i>
+  </a>
+  
+</section>
+
+
+<!--imagen estatica-->
+<section class="fondo3">
+</section>
+
+<!-- Código de vestimenta -->
+<section class="seccion vestimenta" id="vestimenta">
+  <h2>Código de vestimenta</h2>
+  <p>Nuestro codigo de vestimenta será formal elegante.</p>
+  <a href="https://mx.pinterest.com/search/pins/?q=ropa%20para%20xv%20años&rs=typed" class="icono-mapa">
+    <i class="fa-solid fa-user-tie"></i>
+  </a>  
+</section>
+
+<!--imagen estatica-->
+<section class="fondo4">
+</section>
+
+<!-- Despedida -->
+<section class="seccion despedida" id="despedida">
+  <h2>¡Te esperamos con mucho cariño!</h2>
+  <p class="justificado">Gracias por ser parte de este momento tan especial. Tu presencia hará que esta noche sea aún más inolvidable.</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdiGM-2-Ja5svGPLKkNSsrREDKC3upJ03QK0xvFX834_8J08A/viewform?usp=header"  class="icono-mapa">
+  <i class="fa-solid fa-check-to-slot">
+  </i>
+  </a>
+
+</section>
+
+<!--imagen estatica-->
+<section class="fondo5">
+</section>
+
+<!-- Contador regresivo -->
+<section class="seccion contador" id="contador">
+  <h2>¡La cuenta regresiva ha comenzado!</h2>
+  <div id="countdown"></div>
+</section>
+
+<script>
+  const countdown = document.getElementById("countdown");
+  const targetDate = new Date("June 7, 2025 19:00:00").getTime();
+
+  const interval = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if (distance < 0) {
+      clearInterval(interval);
+      countdown.innerHTML = "¡El evento ha comenzado!";
+    }
+  }, 1000);
+</script>
+
+
+</body>
+</html>
