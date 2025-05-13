@@ -39,14 +39,17 @@
   font-family: "Gowun Dodum", sans-serif;
 }
 
+@media (max-width: 1000px) {
 .intro {
-  
+
   background-image: url("imagenes/isabella4.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height:99vh;
+  margin: 0;
+  overflow-x: hidden;
   display: flex;
   align-items: flex-end; /* Coloca el texto en la parte baja */
   justify-content: center;
@@ -55,11 +58,13 @@
 .fondo1 {
   
   background-image: url("imagenes/isabella3.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
   display: flex;
   align-items: flex-end; /* Coloca el texto en la parte baja */
   justify-content: center;
@@ -67,11 +72,13 @@
 
 .fondo2 {
   background-image: url("imagenes/isabella1.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
   display: flex;
   align-items: flex-end; /* Coloca el texto en la parte baja */
   justify-content: center;
@@ -81,11 +88,13 @@
 .fondo3 {
   
   background-image: url("imagenes/eventos.png");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
   display: flex;
   align-items: flex-end; /* Coloca el texto en la parte baja */
   justify-content: center;
@@ -94,11 +103,13 @@
 .fondo4 {
   
   background-image: url("imagenes/isabella5.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
   display: flex;
   align-items: flex-end; /* Coloca el texto en la parte baja */
   justify-content: center;
@@ -106,14 +117,18 @@
 
 .fondo5 {
   background-image: url("imagenes/isabella2.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
   display: flex;
   align-items: flex-end; /* Coloca el texto en la parte baja */
   justify-content: center;
+}
+
 }
 
 
